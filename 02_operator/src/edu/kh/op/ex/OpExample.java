@@ -134,6 +134,8 @@ public class OpExample {
 		
 		// 정수 입력 : -5
 		// 음수 입니다.
+	}
+	public void ex5() {
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("정수 입력 : ");
