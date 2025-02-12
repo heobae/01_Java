@@ -5,14 +5,14 @@ public class VariableExample2 {
 	public static void main(String[] args) {
 		
 /* 		
-          자바 기본자료형 8가지
+          자바 기본자료형 8가지 (primitive type)
 		  
 		 * 논리형 : boolean (1byte)
 		 * 정수형 : byte(1byte), short(2byte), int(4byte), long(8byte)
 		 * 실수형 : float(4byte), double(8byte)  
-		 * 문자형 : char(2byte, 유니코드)
+		 * 문자형 : char(2byte, 유니코드) (영어, 숫자는 1byte, 한글,특수,외국어는 2byte)
 		  
-		 * 참조형 - 문자열 String
+		 * 참조형 - 문자열 String  (reference type)
 */
 		// 변수 선언 : 메모리(RAM)에 값을 저장할 공간을 할당하는 것.
 		// 변수 값 대입 : 변수에 값을 집어 넣는 것.
@@ -43,7 +43,8 @@ public class VariableExample2 {
 		// 프로그래밍에서 대입되는 데이터(값 자체)를 리터럴이라는 단어로도 표현
 		
 		// ** 리터럴 : 변수에 대입되거나 작성되어지는 값 자체
-		// 자료형에 따라 리터럴 표기법이 다름
+		
+		// 자료형에 따라 리터럴 표기법이 다름 (l L f F)
 		
 		long longNumber = 10000000000L; // 값이 범위 안에 있어도 뒤에 ;만 있는건 int형 방식이라 L붙여줘야 함
 		// The literal 10000000000 of type int is out of range
@@ -63,7 +64,7 @@ public class VariableExample2 {
 		
 		// 문자형 (char) 리터럴 표기법 : ''(홑따옴표)
 		// -> 문자 하나
-		char ch = 'A';  // 쌍따옴표로 쓰면 String으로 인식함
+		char ch = 'A';  // 쌍따옴표로 쓰면 String(문자열)으로 인식함
 		char ch2 = 66; // B
 		
 		System.out.println("ch : " + ch);
@@ -125,6 +126,9 @@ public class VariableExample2 {
 		 final int RIGHT_MOVE = 1;
 		
 		 System.out.println(1 + 1.3);
+		 
+		 char ch3 = 36;
+		 System.out.println(ch3);
 	}
 }
        
