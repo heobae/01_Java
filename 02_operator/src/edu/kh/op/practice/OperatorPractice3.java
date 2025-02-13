@@ -8,13 +8,18 @@ public class OperatorPractice3 {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int num1 = 10000;
-		
 		System.out.print("가격을 입력하세요 : ");
-		int total = sc.nextInt();
+		int totalPrice = sc.nextInt();
 		
-		System.out.print("멤버십 있으세요? ");
+		System.out.print("멤버십 있으세요? (있으면 true / 없으면 false 입력) :");
+		boolean isMember = sc.nextBoolean();
 		
+		double discount = isMember ? totalPrice * 0.10 : totalPrice * 0.05;
+		
+		double finalPrice = totalPrice - discount;
+		
+		System.out.println("할인율 : " + discount);
+		System.out.println("할인을 포함한 최종 금액 : " + finalPrice);
 		//미완성...
 	}
 
@@ -39,18 +44,29 @@ public class OperatorPractice3 {
 */
 
  	public void practice2() {
- 		
+ 		Scanner sc = new Scanner(System.in);
  	
- 		int money1 = 50000;
- 		int money2 = 10000;
- 		int money3 = 5000;
- 		int money4 = 1000;
- 		
  		System.out.print("출금할 금액 입력 : ");
+ 		int amount = sc.nextInt();
  		
+ 		int fiftyth = amount / 50000; // 5만원짜리 지폐 개수
+ 		//amount = amount % 50000; // 5만원짜리 지폐 거르고 난 뒤 나머지 금액
+ 		// 나머지 값을 amount변수에 재대입해야 아래 다음 지폐에서 재사용할 수 있음.
  		
+ 		amount %= 50000; // 복합대입연산자(%와 =을 합쳐 사용)
  		
+ 		int tenth = amount / 10000; // 1만원짜리 지폐 개수
+ 		amount %= 10000;  // 1만원짜리 지폐 거르고 나머지 금액
  		
+ 		int fiveth = amount / 5000; // 5천원짜리 지폐 개수
+ 		amount %= 5000; // 5천원짜리 지폐 나누고 나머지 금액
+ 		
+ 		int oneth = amount / 1000; // 1천원짜리 지폐 개수
+ 		
+ 		System.out.println("50000원 : " + fiftyth);
+ 		System.out.println("10000원 : " + tenth);
+ 		System.out.println("5000원 : " + fiveth);
+ 		System.out.println("1000원 : " + oneth);
  	}
 /*
 문제2)
@@ -76,13 +92,29 @@ ex) 사용자가 123000원을 입력하면, 5만원 지폐 2장, 1만원 지폐 
  	
  	public void practice3() {
  		
+ 		Scanner sc = new Scanner(System.in);
+ 		
+ 		System.out.print("첫 번째 수 : ");
+ 		int num1 = sc.nextInt();
+ 		
+ 		System.out.print("두 번째 수 : ");
+ 		int num2 = sc.nextInt();
+ 		
+ 		// 첫번째 수가 두번째 수의 배수인지 알려면?
+ 		// == 첫번째 수가 두번째 수로 나누어 떨어진다는 뜻
+ 		// == 첫번째를 두번째로 나누었을 때 나머지가 0이다
+ 		
+ 		String result = num1 % num2 == 0 ? "배수입니다" : "배수가 아닙니다";
+ 		
+ 		System.out.println(result);
+ 		
  		
  		
  	}
 /*
 문제3)
 사용자로부터 두 개의 정수를 입력받아, 
-첫 번째 수가 두 번째 수의 배수인지 확인하고 결과를 출력해라
+첫 번째 수가 두 번째 수의 배수인지 확인하고 결과를 출력해라 (첫번째수가 두번째수로 나누어 떨어진다)
 만약 배수라면 "배수입니다"를 출력하고, 아니라면 "배수가 아닙니다"를 출력
 
 메서드 : public void practice3() {}

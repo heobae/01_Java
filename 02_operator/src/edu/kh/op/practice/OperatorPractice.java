@@ -1,5 +1,6 @@
 package edu.kh.op.practice;
 
+// ctrl + shift + o
 import java.util.Scanner;
 
 // 기능 제공용 클래스
@@ -23,8 +24,12 @@ public class OperatorPractice {
 	System.out.print("1인당 사탕 개수 : ");
 	System.out.println(input2 / input1);
 	
+	// System.out.printf("1인당 사탕 개수 : %d\n, input2 / input1); 도 가능
+	
 	System.out.print("남는 사탕 개수 :");
 	System.out.println(input2 % input1);
+	
+	// System.out.printf("남는 사탕 개수 : %d\n, input2 % input1);
 	}
 
 
@@ -50,7 +55,7 @@ public void practice2(){
 	
 	System.out.print("이름 : ");
 	String word1 = sc.nextLine();
-	
+		  //변수값 이름 쓸 때 좀 어울리는 걸로 하자...
 	System.out.print("학년 : ");
 	int num1 = sc.nextInt();
 	
@@ -60,11 +65,10 @@ public void practice2(){
 	System.out.print("번호 : ");
 	int num3 = sc.nextInt();
 	
-	sc.nextLine();
+	sc.nextLine(); // 입력버퍼 비우는 일 (개행문자 비우기)
 	
-	System.out.print("성별 : ");
+	System.out.print("성별(남학생/여학생) : ");
 	String word2 = sc.nextLine();
-	
 	
 	System.out.print("성적 : ");
 	Double num4 = sc.nextDouble();
@@ -89,24 +93,29 @@ ex.
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int num1 = 60;
-		int num2 = 80;
-		int num3 = 40;
+		
 		
 		System.out.print("국어 : ");
-		String word1 = sc.nextLine();
+		int kor = sc.nextInt();
 		
 		System.out.print("영어 : ");
-		String word2 = sc.nextLine();
+		int eng = sc.nextInt();
 		
 		System.out.print("수학 : ");
-		String word3 = sc.nextLine();
+		int math = sc.nextInt();
 	
-		System.out.print("합계 : ");
-		System.out.println(num1 + num2 + num3);
+		int sum = kor + eng + math; // 합계
 		
-		System.out.print("평균 : ");
-		System.out.println((num1 + num2 + num3) / 3.0 );
+		double avg = sum / 3.0;
+		
+		System.out.println("합계 : " + sum);
+		System.out.printf("평균 : %.1f\n", avg);
+		
+		// 각 과목이 40점 이상이고 평균 60점 이상이어야 합격
+		// 그 외 불합격 출력
+		
+		boolean result = (kor >= 40) && (eng >= 40) && (math >= 40) && (avg >= 60);
+		System.out.println(result? "합격" : "불합격" );
 		
 	}
 	
