@@ -50,14 +50,12 @@ public class ConditionExample {
 			System.out.println("홀수입니다.");
 		} else { // 짝수 or 0 입력시 수행
 			// 중첩 if문
-		if(input == 0) {
+		} if(input == 0) {
 				System.out.println("0입니다.");
-		}
-
-		else {
+		} else {
 				System.out.println("짝수입니다.");
 		}
-	}
+	
 }		
 	
 	public void ex3() {
@@ -129,7 +127,7 @@ public class ConditionExample {
 	    }
            System.out.println(season);
            
-	}
+	} // 이부분 집에서 해보자
 	
 	public void ex5() {
 		// 나이를 입력받아
@@ -328,8 +326,75 @@ public class ConditionExample {
 		default : System.out.println("학점 : F ");
 		}
 	}
-	
-}		
-	
+		
+	public void ex11() {
+		// 놀이기구 탑승 제한 검사 프로그램
+// 조건 - 나이 : 12세 이상
+// - 키 : 140.0cm 이상
+
+// 나이를 0~100세 사이로 입력하지 않은 경우 : "나이를 잘못 입력 하셨습니다."
+// 키를 0~250.0cm 사이로 입력하지 않은 경우 : "키를 잘못 입력 하셨습니다."
+// -> 입력이 되자 마자 검사를 진행하여 잘못된 경우 프로그램 종료
+
+// 나이 O , 키 X : "나이는 적절하나, 키가 적절치 않음";
+// 나이 X , 키 O : "키는 적절하나, 나이는 적절치 않음";
+// 나이 X , 키 X : "나이와 키 모두 적절치 않음";
+// 나이 O , 키 O : "탑승 가능"
+
+				// [실행화면]
+				// 나이 입력 : 130
+				// 나이를 잘못 입력 하셨습니다
+
+				// 나이 입력 : 30
+				// 키 입력 : 300
+				// 키를 잘못 입력 하셨습니다
+
+				// 나이 입력 : 20
+				// 키 입력 : 110
+				// 나이는 적절하나, 키가 적절치 않음
+
+				// 나이 입력 : 10
+				// 키 입력 : 150
+				// 키는 적절하나, 나이가 적절치 않음
+
+				// 나이 입력 : 10
+				// 키 입력 : 110
+				// 나이와 키 모두 적절치 않음
+
+				// 나이 입력 : 15
+				// 키 입력 : 160
+				// 탑승 가능!!!
+		
+		System.out.print("나이 입력 : ");
+		int age = sc.nextInt();
+		
+		String result;
+		
+		if(age < 0 || age > 100) {
+			result = "나이를 잘못 입력하셨습니다.";
+		} else {
+			
+			System.out.print("키 입력 : ");
+			int h = sc.nextInt();
+			
+			if(h < 0 || h > 250) {
+				result = "키를 잘못 입력하셨습니다.";
+			} else if(age < 12 && h < 140 ) {
+				result = "나이와 키 모두 적절치 않음";
+			} else if(age < 12 ) {
+				result = "키는 적절하나 나이가 적절하지 않음";
+			} else if(h < 140) {
+				result = "나이는 적절하나 키가 적절하지 않음";
+			} else {
+				result = "탑승가능!";
+			}
+			
+		}
+		
+		
+		
+		System.out.println(result);
+	}	
+}	
 
 

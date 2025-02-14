@@ -52,7 +52,6 @@ public class OperatorPractice3 {
  		int fiftyth = amount / 50000; // 5만원짜리 지폐 개수
  		//amount = amount % 50000; // 5만원짜리 지폐 거르고 난 뒤 나머지 금액
  		// 나머지 값을 amount변수에 재대입해야 아래 다음 지폐에서 재사용할 수 있음.
- 		
  		amount %= 50000; // 복합대입연산자(%와 =을 합쳐 사용)
  		
  		int tenth = amount / 10000; // 1만원짜리 지폐 개수

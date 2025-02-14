@@ -16,7 +16,8 @@ public class ConditionRun {
 		//condition.ex7();
 		//condition.ex8();
 		//condition.ex9();
-		condition.ex10();
+		//condition.ex10();
+		condition.ex11();
 		  
 	}
 

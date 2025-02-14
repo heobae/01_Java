@@ -21,9 +21,9 @@ public class PracticeRun {
 		
 		OperatorPractice3 op3 = new OperatorPractice3();
 		
-		//op3.practice1();
+		op3.practice1();
 		//op3.practice2();
-		op3.practice3();
+		//op3.practice3();
 	}	
 	
 }	
