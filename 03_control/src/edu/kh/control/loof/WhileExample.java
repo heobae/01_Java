@@ -68,7 +68,7 @@ public class WhileExample {
 			sum += input;
 			// sum = sum + input;
 			
-		} while(input != 0);  // 0 넣으면 fals e나오면서 끝, 아래 프린트라인으로
+		} while(input != 0);  // 0 넣으면 false나오면서 끝, 아래 프린트라인으로
 		
 		System.out.println("합계 : " + sum);
 	}

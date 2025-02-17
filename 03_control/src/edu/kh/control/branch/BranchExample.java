@@ -126,7 +126,7 @@ public class BranchExample { // 기능 제공용 클래스
 			System.out.print("가위/바위/보 중 하나 입력 : ");
 			String input = sc.next();
 			
-			int random = (int)(Math.random() *3 + 1);  // 1 2 3 중 랜덤값 뱉음
+			int random = (int)(Math.random() *3 +1);  // 1 2 3 중 랜덤값 뱉음
 			// Math.random() : 0.0 ~ 1.0 사이
 			// 0.0 <= x < 1.0
 			// 0.0 <= x *3 < 1.0
@@ -211,7 +211,10 @@ public class BranchExample { // 기능 제공용 클래스
 				case 3 : com = "보"; break;
 				}
 				
-				System.out.println();
+				System.out.printf("컴퓨터는 [%s]를 선택했습니다.\n", com);
+				
+				
+				
 				
 				
 				
