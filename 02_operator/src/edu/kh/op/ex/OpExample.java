@@ -141,9 +141,9 @@ public class OpExample {
 		System.out.print("정수 입력 : ");
 		int input1 = sc.nextInt();
 		
-		String result2 = input1 >= 0 ? "양수 입니다" : "음수 입니다";
+		String result = input1 >= 0 ? "양수 입니다" : "음수 입니다";
 		
-		System.out.println(result2);
+		System.out.println(result);
 		
 	
 		
