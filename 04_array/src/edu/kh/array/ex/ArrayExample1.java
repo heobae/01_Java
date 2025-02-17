@@ -82,7 +82,7 @@ public class ArrayExample1 {
 		
 		// 배열 선언 및 할당
 		int[] arr = new int[4];
-//             ㄴ 참조 변수
+            // ㄴ 참조 변수
 		// arr[0~3] 전부 JVM에 의해 0으로 초기화 되어있는 상태
 		
 		arr[0] = 100;
@@ -326,7 +326,7 @@ public class ArrayExample1 {
 		String str1 = "가나다";  // String Constant Pool 저장 (문자열 상수풀에 저장) "리터럴 표기법"
 		String str2 = new String("가나다"); // Heap 새 객체 저장 "뉴스트링 연산"
 		String str3 = "가나다"; // str1이랑 같은 주소 참조
-		String str4 = new String("가나다"); // str2랑 같은 주소 참조
+		String str4 = new String("가나다"); // str2처럼 같은 문자열을 가져도 다른 곳을 찾고
 		System.out.println(str1); // 주소값? str(.toString()이 생략되어있음
 		System.out.println(str2); 
 		System.out.println(str1.toString());
@@ -341,6 +341,8 @@ public class ArrayExample1 {
 		// 주소값(객체의 해시코드)을 확인하고 싶다면 아래처럼 사용 (쓸 일은 없음)
 		System.out.println(System.identityHashCode(str1));
 		System.out.println(System.identityHashCode(str2));
+		System.out.println(System.identityHashCode(str3));
+		System.out.println(System.identityHashCode(str4));
 		
 		String[] strArr = {"사과", "바나나", "딸기"};
 		// 메모리 구조가 어떻게 생겼을까?
