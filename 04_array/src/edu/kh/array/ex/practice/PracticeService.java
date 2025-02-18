@@ -260,11 +260,19 @@ i 개수 : 2
 		System.out.print("주민등록번호(-포함) : ");
 		String input = sc.nextLine();
 		
+		char[] arr = new char[input.length()];
+		
 		for(int i = 0; i < input.length(); i++) {
 			
+			if(i <= 7) {
+				arr[i] = input.charAt(i);
+			} else {
+				arr[i] = '*';
+			}
+			System.out.print(arr[i]);
 		}
 		
-		System.out.println(input);
+		
 		
 		
 	}
@@ -336,9 +344,13 @@ i 개수 : 2
 			int random = (int)(Math.random()*10 +1);
 			arr[i] = random;
 			
+		}	
+			System.out.print("발생한 난수 : ");
 			
-			System.out.printf("발생한 난수 : %d", arr[i]);
-		}  
+			for(int i = 0; i < arr.length; i++) {
+				System.out.print(arr[i] + " ");
+			}
+		  
 			
 		 
 		
@@ -358,6 +370,33 @@ i 개수 : 2
 최대값 : 10
 최소값 : 2
 */
+		int[] arr = new int[10];
+		System.out.print("발생한 난수 : ");
+		
+		for(int i = 0; i < arr.length; i++) {
+			int random = (int)(Math.random()*10 +1);
+			arr[i] = random;
+			
+			
+			System.out.print(arr[i] + " ");
+		}	
+			System.out.println();
+			int max = 1;
+			int min = 10;
+			
+			for(int i = 0; i < arr.length; i++) {
+				
+				if (arr[i] > max) {
+					max = arr[i];
+				}
+				if (arr[i] < min) {
+					min = arr[i];
+				} 
+			} 
+			
+			System.out.println("최대값 : " + max);
+			System.out.println("최소값 : " + min);
+		
 		
 	}
 	
@@ -374,7 +413,7 @@ i 개수 : 2
 		
 		for(int i = 0; i < arr.length; i++) {
 			
-			int random = (int)(Math.random()*11);
+			int random = (int)(Math.random()*10 +1);
 			
 			arr[i] = random;
 			
@@ -387,7 +426,11 @@ i 개수 : 2
 			}
 			
 			
-		} System.out.println();
+		} 
+		
+		for(int i = 0; i < arr.length; i++) {
+			System.out.print(arr[i] + " ");
+		}
 		
 	}
 	
