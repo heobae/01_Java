@@ -73,7 +73,7 @@ public class ArrayExample1 {
 		 
 		 // [10, 50, 100] 실제로 arr 배열이 가진 모든 요소의 값을 알고 싶을 때
 		 //Arrays.toString(배열명);
-		 System.out.println(Arrays.toString(arr));
+		 System.out.println(Arrays.toString(arr)); // (import 해줘야 함!!)
 		
 		// 배열 사용
 	}
@@ -102,7 +102,7 @@ public class ArrayExample1 {
 		
 		for(int i = 0; i < arr.length; i++) {
 			// i -> 0 1 2 3
-			System.out.printf("arr[%d]에 저장된 값 : %d\n ", i, arr[i]);
+			System.out.printf("arr[%d]에 저장된 값 : %d\n", i, arr[i]);
 			// arr[0]에 저장된 값 : 100
 			// arr[1]에 저장된 값 : 200
 			// ...
@@ -235,7 +235,7 @@ public class ArrayExample1 {
 		// 0 1 2 3 4 5
 		// 0.0 <= x < 1.0
 		// 0.0 <= x * 6 < 6.0
-		// 0 < x < 6
+		// 0 <= x < 6
 		
 	}
 	
