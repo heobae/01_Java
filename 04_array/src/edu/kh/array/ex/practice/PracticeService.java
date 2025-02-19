@@ -567,7 +567,7 @@ i 개수 : 2
 		System.out.print("배열의 크기를 입력하세요 : ");
 		int size = sc.nextInt();
 		
-		sc.nextLine(); // 525줄 Int와 534줄 Line 때문에! 입력버퍼에 남은 개행문자 제거
+		sc.nextLine(); //  Int와 Line 때문에! 입력버퍼에 남은 개행문자 제거
 		
 		String[] arr = new String[size]; // 왜 String?? => 출력하는 마지막 줄들 문자열이니까
 		
