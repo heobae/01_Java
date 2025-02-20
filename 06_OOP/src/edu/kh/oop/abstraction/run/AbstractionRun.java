@@ -11,7 +11,7 @@ public class AbstractionRun { // 실행용 클래스
 		
 		// 객체에서 ex1() 메서드 호출
 //		as.ex1();
-		as.ex2();
+//		as.ex2();
 		
 		
 	}
