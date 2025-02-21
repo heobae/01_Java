@@ -393,18 +393,24 @@ ex.
 *******	
 	
 */
-		
 		System.out.print("정수 입력 : ");
-		int input = sc.nextInt();
+		int input = sc.nextInt(); // 4일때
 		
-		for(int row = 1; row <= input; row++) {
-			for(int col = 1; col <= input - row; col++) {
-				System.out.print(" ");
-			}  for(int col = 1; col <= row; col++) {
-				System.out.print("*");
-			}  System.out.println();
-		}
-	} //미완성
+		 for (int row = 1; row <= input; row++) { // 행(row) 1 ~ input 까지 1씩 증가
+			 
+            for (int space = 1; space <= input - row; space++) { // 왼쪽 공백 출력(input - row 개 출력 (맨 위가 가장 많고, 아래로 갈수록 줄어듦)
+                System.out.print(" "); 
+            }
+            // 왼쪽 공백 출력 끝났으면 
+            // 이제 아래 별 출력
+            for (int col = 1; col <= (2 * row - 1); col++) { // 별 출력
+                System.out.print("*");
+            }
+            
+            System.out.println(); // 줄 바꿈
+        }
+		
+	}
 
 	public void practice12() {
 		
