@@ -36,7 +36,7 @@ public class Student { // 클래스 선언부
 		 * 프로그램이 종료될 때까지 사라지지 않음(정적)
 		 * 그리고, static 영역에 생성된 변수는 어디서든지 공유 가능
 		 */
-		public static String schoolName = "KH고등학교";;
+		public static String schoolName = "KH고등학교";
 		
 		//final
 		private  int TEMP1 = 100;
