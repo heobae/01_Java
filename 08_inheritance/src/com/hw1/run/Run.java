@@ -83,9 +83,12 @@ public class Run {
 			System.out.print("계속 추가하시겠습니까? (y/n) : ");
 			String str = sc.next().toUpperCase(); // 소문자 -> 대문자
 			// String.toUpperCase() : "n" -> "N"
-			// String toLowerCase() : 대문자 -> 소문자 "N" =>
+			// String toLowerCase() : 대문자 -> 소문자 "N" => "n"
 			
-			if(str.equalsIgnoreCase("N")) break; // 대문자든 소문자든 n이면 가능
+			if(str.equals("N")) break; 
+			
+			
+			//if(str.equalsIgnoreCase("N")) break; // 대문자든 소문자든 n이면 가능
 			// equalsIgnoreCase : 문자열 비교 메서드
 			//					  대소문자를 구분하지 않고 두 문자열이 같은지 비교
 			
@@ -95,7 +98,7 @@ public class Run {
 		for(Employee emp : emps) {
 			// [첫번째 EMP객체에 대한 주소, 두번째 EMP객체주소, null,null,null,null,null,null,null,null]
 			// 만약에 emp가 null이면 반복 종료!
-			if(emp ==null) break; // NullPointerException 방지
+			if(emp == null) break; // NullPointerException 방지
 			
 			System.out.println(emp.information());
 		}
