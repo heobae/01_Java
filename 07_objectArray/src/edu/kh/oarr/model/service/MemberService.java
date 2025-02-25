@@ -69,7 +69,7 @@ public class MemberService {
 				;break;
 			case 5 : searchRegion(); break;
 			case 0 : System.out.println("프로그램 종료..."); break;
-			default : System.out.println("잘못 입력하셨슴니다, 다시 입력하세요!");
+			default : System.out.println("잘못 입력하셨습니다, 다시 입력하세요!");
 			}
 			
 			
