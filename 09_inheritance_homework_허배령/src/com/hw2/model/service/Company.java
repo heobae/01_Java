@@ -12,7 +12,6 @@ public class Company implements ManagementSystem {
 
 	@Override
 	public void addPerson() {
-		
 	}
 
 	@Override
