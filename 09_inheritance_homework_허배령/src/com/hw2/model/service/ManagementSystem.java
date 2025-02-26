@@ -1,12 +1,12 @@
 package com.hw2.model.service;
 
-public interface ManagementSystem {
+import com.hw2.model.dto.Person;
 
-	public abstract void addPerson();
+public interface ManagementSystem {
 	
-	public abstract void removePerson();
+	// 관리 시스템 인터페이스
 	
-	public abstract void displayAllPersons();
-	
-	
+	void addPerson(Person person); // 인원 추가
+	void removePerson(String id); // 인원 삭제
+	void displayAllPersons(); // 모든 인원 조회
 }

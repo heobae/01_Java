@@ -21,7 +21,8 @@ public  class Textbook extends Book {
 
 	@Override
 	public void displayInfo() {
-		System.out.printf("[전문 서적] 제목 : %s / 저자 : %s / 과목 : %s", getTitle(), getAuthor(), getSubject());
+		System.out.printf("[전문 서적] 제목 : %s / 저자 : %s / 과목 : %s", 
+				super.getTitle(), super.getAuthor(), subject);
 	}
 	
 	

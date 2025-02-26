@@ -21,6 +21,7 @@ public  class Poetry extends Book{
 	
 	@Override
 	public void displayInfo() {
-		System.out.printf("[소설] 제목 : %s / 저자 : %s / 시 수 : %d ", getTitle(), getAuthor(), getNumberOfPoems());
+		System.out.printf("[소설] 제목 : %s / 저자 : %s / 시 수 : %d ", 
+				super.getTitle(), super.getAuthor(), numberOfPoems);
 	}
 }

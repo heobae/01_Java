@@ -2,8 +2,8 @@ package com.hw2.model.dto;
 
 public abstract class Person {
 	
-	protected String id;	//고유번호
-	protected String name;	//이름
+	protected String id; // 고유번호
+	protected String name; // 이름
 	
 	public Person(String id, String name) {
 		super();
@@ -27,8 +27,7 @@ public abstract class Person {
 		this.name = name;
 	}
 	
-	public abstract String getInfo();
+	public abstract String getInfo(); 
+	// Person 정보를 문자열로 리턴
 	
-	
-
 }
