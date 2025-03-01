@@ -1,30 +1,21 @@
 package com.hw3.model.dto;
 
-public class Book{
-
-	private int num;
-	private String title;
-	private String author;
-	private int price;
-	private String company;
+public class Book {
+	private String title; // 책제목
+	private String writer; // 저자
+	private int price; // 가격
+	private String publisher; // 출판사
+	private int bookNum; // 책 번호
 	
 	public Book() {}
 
-	public Book(int num, String title, String author, int price, String company) {
+	public Book(String title, String writer, int price, String publisher, int bookNum) {
 		super();
-		this.num = num;
 		this.title = title;
-		this.author = author;
+		this.writer = writer;
 		this.price = price;
-		this.company = company;
-	}
-
-	public int getNum() {
-		return num;
-	}
-
-	public void setNum(int num) {
-		this.num = num;
+		this.publisher = publisher;
+		this.bookNum = bookNum;
 	}
 
 	public String getTitle() {
@@ -35,12 +26,12 @@ public class Book{
 		this.title = title;
 	}
 
-	public String getAuthor() {
-		return author;
+	public String getWriter() {
+		return writer;
 	}
 
-	public void setAuthor(String author) {
-		this.author = author;
+	public void setWriter(String writer) {
+		this.writer = writer;
 	}
 
 	public int getPrice() {
@@ -51,18 +42,31 @@ public class Book{
 		this.price = price;
 	}
 
-	public String getCompany() {
-		return company;
+	public String getPublisher() {
+		return publisher;
 	}
 
-	public void setCompany(String company) {
-		this.company = company;
+	public void setPublisher(String publisher) {
+		this.publisher = publisher;
 	}
 
+	public int getBookNum() {
+		return bookNum;
+	}
+
+	public void setBookNum(int bookNum) {
+		this.bookNum = bookNum;
+	}
+	
+	
 	@Override
 	public String toString() {
-		return  "[도서 번호 : " + num + " / " + "도서제목 : " + title + " / " + "도서저자 : " + author + " / " + "도서가격 : " + price+"원" + " / " + "출판사 : " + company + "]";
+		return  bookNum + "번 도서 : [도서제목 : " + title + 
+				" / 도서저자 : " + writer 
+				+ " / 도서가격 : " + price + "원 / 출판사 : " + publisher + "]" ;
 	}
+	
+	
 	
 	
 	
