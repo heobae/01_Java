@@ -2,8 +2,11 @@ package edu.kh.io.pack4.model.service;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class CharacterService {
 
@@ -109,6 +112,51 @@ public class CharacterService {
 				e.printStackTrace();
 			}
 			
+		}
+	}
+	
+	public void output1() {
+		
+		File directory = new File("/io_test/20250317");
+		
+if(!directory.exists()) {	// 폴더가 존재하지 않으면 (부정연산자!)
+			
+			// 폴더를 모두 생성
+			directory.mkdirs();
+			
+			System.out.println(directory.getName());
+			System.out.println(directory.getPath());
+		}
+		
+		FileOutputStream fos = null;
+		
+		try {
+			fos = new FileOutputStream("/io_test/20250317/test.txt");
+			
+			StringBuilder sb = new StringBuilder();
+			String str = "안녕하세요!";
+			fos.write(str.getBytes());
+		//	sb.append("안녕하세요!");
+		//	String content = sb.toString();
+		//	fos.write(content.getBytes());
+			 
+		//	 String str = "안녕하세요!";
+			
+		/*	for(int i = 0; i < str.length(); i++) {
+				char ch = str.charAt(i);
+				fos.write(ch);
+			} */
+			
+		} catch(IOException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if(fos != null) {
+					fos.close();
+				}
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
